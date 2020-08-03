@@ -1,0 +1,21 @@
+DROP TABLE IF EXISTS USER;
+DROP TABLE IF EXISTS POST;
+DROP TABLE IF EXISTS FEEDBACK;
+ 
+CREATE TABLE USER (
+  id INT AUTO_INCREMENT  PRIMARY KEY,
+  username VARCHAR(25) NOT NULL,
+  email VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE POST (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    id_user int not null,
+    text VARCHAR(250) not null
+);
+ 
+CREATE TABLE FEEDBACK(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    id_user int not null,
+    rating int not null 
+);
